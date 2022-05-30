@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet'>   
+    <ion-title class="title"> 
+      Pictura
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <div >
+      <ion-text class="descricao-tab">
+        <h2> Selecione o artigo que pretende personalizar</h2>
+      </ion-text>
+      <!-- CARDS -->
+     
+      
+
+
+
+
+
+      <ion-grid style="text-align: center;">
+        <ion-row>
+          <ion-col>
+             <!-- bone -->
+            <ion-card class="padded-card" (click)="verPublicacoes('bone')">
+              <img src="../../assets/imgs/bone.png" />
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <!-- Camisola -->
+              <ion-card class="padded-card" (click)="verPublicacoes('camisola')">
+              <img src="../../assets/imgs/camisola.png" />
+            </ion-card>
+          </ion-col>
+          <ion-col>
+              <!-- Caneca -->
+              <ion-card class="padded-card" (click)="verPublicacoes('caneca')">
+                <img src="../../assets/imgs/caneca.png" />
+              </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+</ion-content>

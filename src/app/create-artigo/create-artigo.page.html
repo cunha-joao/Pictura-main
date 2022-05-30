@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Criar {{ createArtigo.title }}s</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="padded-card">
+    <img class="createImage" src="../../assets/imgs/{{ createArtigo.img }}" />
+  </ion-card>
+
+  <ion-grid style="text-align: center;">
+    <ion-row>
+      <ion-col>
+         <!-- bone -->
+        <ion-card class="padded-card">
+          <ion-icon name="add" size="large" color="dark"></ion-icon>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <!-- Camisola -->
+          <ion-card class="padded-card">
+            <ion-icon name="trash" size="large" color="dark"></ion-icon>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet'>   
+    <ion-title class="title"> 
+      Pictura
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <div>
+      <ion-text class="descricao-tab">
+        <h2> Iniciar Sessão </h2>
+      </ion-text>
+
+      <!--Formulário de Login-->
+      <form [formGroup]="Login" (ngSubmit)="submitForm()" novalidate>
+
+        <!--Nome-->
+        <ion-item lines="full">
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" formControlName="nome" required></ion-input>
+        </ion-item>
+        <ion-text class="ion-padding" *ngIf="isSubmitted && formControls.nome.errors?.required" color="danger">
+          Preenchimento obrigatório
+        </ion-text>
+        <ion-text class="ion-padding" *ngIf="isSubmitted && formControls.nome.errors?.minlength" color="danger">
+          Nome tem de ter no mínimo 2 carateres
+        </ion-text>
+
+        <!--Senha-->
+        <ion-item lines="full">
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" formControlName="senha" required></ion-input>
+        </ion-item>
+        <ion-text class="ion-padding" *ngIf="isSubmitted && formControls.nome.errors?.required" color="danger">
+          Preenchimento obrigatório
+        </ion-text>
+        
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" expand="block" color="pictura">Entrar</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+
+      <ion-text class="ion-padding">
+        Caso ainda não tenha conta registe-se aqui.
+      </ion-text>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" [routerLink]="['/registar']" color="pictura">Registar</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+</ion-content>

@@ -1,0 +1,28 @@
+img{
+    height: 20vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    max-width: 80%;
+}
+ion-grid{
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+}
+
+.padded-card{
+    display: inline-block;
+}
+.descricao-tab h2{
+    text-align: center;
+    margin-top: 20%;
+}
+
+ion-title{
+    text-align: center;
+}
+.title{
+    font-family: 'Italianno';font-size: 40px;
+}

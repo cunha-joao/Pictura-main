@@ -1,0 +1,10 @@
+{
+        
+    "camisola": {
+        "id": "2",
+        "name": "Camisola",
+        "imdb_rating": "6.9",
+        "release_year": "2017",
+        "img": "camisola.png"
+      }
+}

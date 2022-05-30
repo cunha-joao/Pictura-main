@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registar</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <div>
+      <form [formGroup]="Registar" (ngSubmit)="submitForm()" novalidate>
+
+        <!--Nome-->
+        <ion-item lines="full">
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" formControlName="nome" required></ion-input>
+        </ion-item>
+        <ion-text class="ion-padding" *ngIf="isSubmitted && formControls.nome.errors?.required" color="danger">
+          Preenchimento obrigatório
+        </ion-text>
+        <ion-text class="ion-padding" *ngIf="isSubmitted && formControls.nome.errors?.minlength" color="danger">
+          Nome tem de ter no mínimo 2 carateres
+        </ion-text>
+
+        <!--Senha-->
+        <ion-item lines="full">
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" formControlName="senha" required></ion-input>
+        </ion-item>
+        <ion-text class="ion-padding" *ngIf="isSubmitted && formControls.nome.errors?.required" color="danger">
+          Preenchimento obrigatório
+        </ion-text>
+        <ion-text class="ion-padding" *ngIf="isSubmitted && formControls.nome.errors?.minlength" color="danger">
+          Nome tem de ter no mínimo 2 carateres
+        </ion-text>
+
+        <!--Email-->
+        <ion-item lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" formControlName="email" required></ion-input>
+        </ion-item>
+        <ion-text class="ion-padding" *ngIf="isSubmitted && formControls.nome.errors?.required" color="danger">
+          Preenchimento obrigatório
+        </ion-text>
+        
+        <!--Morada-->
+        <ion-item lines="full">
+          <ion-label position="floating">Morada</ion-label>
+          <ion-input type="text" formControlName="morada" required></ion-input>
+        </ion-item>
+        <ion-text class="ion-padding" *ngIf="isSubmitted && formControls.nome.errors?.required" color="danger">
+          Preenchimento obrigatório
+        </ion-text>
+        
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" expand="block" color="pictura">Confirmar</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+</ion-content>

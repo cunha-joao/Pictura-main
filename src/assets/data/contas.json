@@ -1,0 +1,8 @@
+{
+    "conta": {
+        "nome": "João",
+        "senha": "joao123",
+        "email": "joao.pictura@gmail.com",
+        "morada": "Rua Pictura"
+    }
+}

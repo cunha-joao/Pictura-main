@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ boneSearch.title }}s</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngIf="boneSearch.title == bone">
+    <ion-card-header>
+      <img src="./assets/imgs/{{ boneSearch.img }}" />
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card *ngFor="let movie of dataPublicacoes | keyvalue">
+    <ion-card-header>
+      <img src="./assets/imgs/{{ movie.value.img }}" />
+    </ion-card-header>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row *ngFor="let movie of dataPublicacoes | keyvalue" class="ion-margin">
+      <ion-col size-sm="9"><ion-text color="primary">{{ movie.value.release_year }}</ion-text></ion-col>
+      <ion-col size-sm="3"><ion-text color="medium" class="ion-float-right"><small>{{ movie.value.imdb_rating }}</small></ion-text></ion-col>
+      <ion-col size="12"> {{ movie.value.title }}</ion-col>
+      <ion-item-divider></ion-item-divider>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
